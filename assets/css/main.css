@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1247,23 +1250,24 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 1s ease-in-out;
+		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 1s ease-in-out;
+		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 1s ease-in-out;
+		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 1s ease-in-out;
 		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		max-width: 100%;
+		opacity: 1 !important; /* Force opacity to be 1 for header */
 		text-align: center;
 	}
 
 		#header > * {
-			-moz-transition: opacity 0.325s ease-in-out;
-			-webkit-transition: opacity 0.325s ease-in-out;
-			-ms-transition: opacity 0.325s ease-in-out;
-			transition: opacity 0.325s ease-in-out;
+			-moz-transition: opacity 1s ease-in-out;
+			-webkit-transition: opacity 1s ease-in-out;
+			-ms-transition: opacity 1s ease-in-out;
+			transition: opacity 1s ease-in-out;
 			position: relative;
 			margin-top: 3.5rem;
 		}
@@ -1300,18 +1304,26 @@ input, select, textarea {
 			}
 
 		#header .content {
+			background-color: rgba(169, 169, 169, 0.55); /* 50% opacity gray */
 			border-style: solid;
 			border-color: #ffffff;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
+			overflow: hidden;
+			color: rgba(0, 0, 1, 1); /* Fully opaque black text */
+			font-size: 5.5rem; /* Default larger size for text */
+			opacity:1;
 		}
+		
+		
+		
 
 			#header .content .inner {
-				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-ms-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 1s ease-in-out;
+				-webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 1s ease-in-out;
+				-ms-transition: max-height 0.75s ease, padding 0.75s ease, opacity 1s ease-in-out;
+				transition: max-height 0.75s ease, padding 0.75s ease, opacity 1s ease-in-out;
 				-moz-transition-delay: 0.25s;
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
@@ -1319,6 +1331,7 @@ input, select, textarea {
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
+				
 			}
 
 				#header .content .inner > :last-child {
@@ -1355,7 +1368,7 @@ input, select, textarea {
 
 				#header nav ul li a {
 					display: block;
-					min-width: 7.5rem;
+					min-width: 10rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
 					padding: 0 1.25rem 0 1.45rem;
@@ -1397,7 +1410,7 @@ input, select, textarea {
 			-webkit-filter: blur(0.1rem);
 			-ms-filter: blur(0.1rem);
 			filter: blur(0.1rem);
-			opacity: 0;
+			opacity: 1;
 		}
 
 		body.is-preload #header {
@@ -1408,14 +1421,14 @@ input, select, textarea {
 		}
 
 			body.is-preload #header > * {
-				opacity: 0;
+				opacity: 1;
 			}
 
 			body.is-preload #header .content .inner {
 				max-height: 0;
 				padding-top: 0;
 				padding-bottom: 0;
-				opacity: 0;
+				opacity: 1;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -1656,3 +1669,31 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		.cv-layout {
+			display: flex; /* Use flexbox to arrange content */
+			justify-content: flex-start; /* Ensure content is aligned from left to right */
+			gap: 20px; /* Optional: space between content and image */
+		}
+		
+		.cv-content {
+			flex: 2; /* Content takes 2 parts of available space */
+		}
+		
+		.cv-image {
+			flex: 1; /* Image takes 1 part of available space */
+			text-align: right; /* Align the image to the right */
+		}
+		
+		.cv-image img {
+			max-width: 100%; /* Ensures image doesn't overflow */
+			height: auto; /* Maintain aspect ratio */
+		}
+		
+		@media screen and (max-width: 768px) {
+			.cv-layout {
+				flex-direction: column; /* Stack the content and image on smaller screens */
+			}
+		}
+		
+		
