@@ -1158,7 +1158,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/rich_3D_2.jpg");
 			background-position: center;
 			background-size: 90%;
 			background-repeat: no-repeat;
@@ -1696,8 +1696,6 @@ input, select, textarea {
 			}
 		}
 		
-<<<<<<< HEAD
-=======
 		.projects-container {
 			display: flex;
 			flex-wrap: wrap;
@@ -1732,5 +1730,4 @@ input, select, textarea {
 			font-size: 1.2em;
 			font-weight: bold;
 		}
->>>>>>> 2nd commit
 		
